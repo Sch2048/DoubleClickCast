@@ -73,7 +73,7 @@ void FDoubleClickCastModule::StartupModule()
 {
 	InputProcessor = MakeShared<FDoubleClickCastInputProcessor>();
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
-	FSlateApplication::Get().RegisterInputPreProcessor(InputProcessor.ToSharedRef(), EInputPreProcessorType::Editor);
+	FSlateApplication::Get().RegisterInputPreProcessor(InputProcessor.ToSharedRef());
 }
 
 void FDoubleClickCastModule::ShutdownModule()
